@@ -17,8 +17,8 @@ import org.testng.annotations.Test;
 
 public class Lambda_Automation_Selenium {
 
-	public String username = "supratikdeyece08";
-    public String accesskey = "t8SEqVrdXsJRLb9ysp0CvGZdZLoIqWhWgg3JuukXwgX2S9QRHy";
+	public String username = "deepsundarrout";
+    public String accesskey = "aCvJBvAhaJG19c4Oq0IEFHUNkLDlRcp7MQZrrnkQPQHCzinOTG";
     public static RemoteWebDriver driver = null;
     public String gridURL = "@hub.lambdatest.com/wd/hub";
     boolean status = false;
