@@ -61,18 +61,25 @@ public class Lambda_Automation_Selenium {
         String actual_URL = driver.getCurrentUrl();
         
         Assert.assertEquals(URL, actual_URL);
-        
-        String Welcome = "Welcome to LambdaTest";
-        WebElement Enter_Text = driver.findElement(By.xpath("//*[@id=\'user-message\']"));
-        Enter_Text.sendKeys(Welcome);
-        Thread.sleep(2000);
-        WebElement checked = driver.findElement(By.xpath("//*[@id=\'showInput\']"));
-        checked.click();
-        Thread.sleep(2000);
-        
-        WebElement my_msg = driver.findElement(By.xpath("//*[@id=\'message\']"));
-        String My_MSG = my_msg.getText();
-        Assert.assertEquals(My_MSG,Welcome);      
+
+	    String checkName = "Welcome to LambdaTest";
+		
+		WebElement yourMessage = driver.findElement(By.cssSelector("[id = 'user-message']:nth-child(2)"));
+		
+		yourMessage.sendKeys(checkName);
+		
+		Thread.sleep(1500);
+		
+		WebElement checkValue = driver.findElement(By.cssSelector("#showInput"));
+		
+		checkValue.click();
+		
+		Thread.sleep(1500);
+		
+		WebElement getValue = driver.findElement(By.xpath("//p[@id='message']"));
+		getValue.getText();
+		
+		Assert.assertEquals(checkName,getValue);
         
     }
     
